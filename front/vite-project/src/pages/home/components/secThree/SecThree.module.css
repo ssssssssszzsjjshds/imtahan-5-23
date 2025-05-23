@@ -1,0 +1,134 @@
+.card{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+text-align: center;
+gap: 5px;
+ i {
+    color: #108474;
+ }
+h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+p {
+    font-size: 1rem;
+    color: gray;
+}
+    .img {
+     img {
+        max-width: 280px;
+        max-height: 263px;
+     }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border-radius: 15px;
+
+        .buttons {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            bottom: 0;
+            padding: 10px 0px;
+            gap: 20px;
+            opacity: 0;
+transition: opacity 0.2s ease-in-out;
+            button {
+                height: 40px;
+                width: 40px;
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+                outline: none;
+                border: 1px solid grey;background-color: #fff;
+                border-radius: 50%;
+                cursor: pointer;
+                i {
+                    font-size: 1rem;display: flex;
+                  
+                    color: rgb(41, 41, 41);
+                    
+                }
+            }
+        }
+    }
+}
+
+
+.img:hover {
+    .buttons {
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+.cards {
+    display: flex;
+
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.sortFilter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+        margin-left: 5px;
+        padding: 2px 20px;
+        background-color: #121212;
+        color: white;
+        font-family: 'Jost';
+        border: none;
+        outline: none;
+        font-size: 1.1rem;
+        border-radius: 5px;
+       cursor: pointer;
+    }
+
+    input {
+        height: 27px;
+        width: 270px;
+        border-radius: 5px;
+        border: 1px solid grey;
+        text-indent: 5px;
+        outline: none;
+
+    }
+
+}
+
+
+@media screen and (max-width: 767px) {
+ .sortFilter {
+    flex-direction: column !important;
+    gap: 5px;
+
+    button {
+        width: 270px;
+    }
+ }
+
+ .cards {
+    justify-content: center;
+    align-items: center;
+ }
+}
